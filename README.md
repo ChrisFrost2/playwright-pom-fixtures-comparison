@@ -1,3 +1,5 @@
+## Example of using POM and Fixtures for Playwright with https://www.saucedemo.com/
+
 # How to start
 npm instal
 
