@@ -1,12 +1,12 @@
 import { test as base } from '@playwright/test';
 
-type LoginFixture = {
+type FixtureExample = {
     login: (username: string, password: string) => Promise<void>;
     addProductToCart: (productName: string) => Promise<void>;
     startCheckout: () => Promise<void>;
 };
 
-export const test = base.extend<LoginFixture>({
+export const test = base.extend<FixtureExample>({
     login: async ({ page }, use) => {
         await use(async (username: string, password: string) => {
             await page.goto('https://www.saucedemo.com/');
