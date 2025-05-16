@@ -16,7 +16,7 @@ test.describe('Login tests', () => {
     await inventoryPage.isOpened();
   });
 
-  test('Faild login - user not authorired because is locked out', async ({ page }) => {
+  test('Failed login - user not authorired because is locked out', async ({ page }) => {
     const loginPage = new LoginPage(page);
 
     await loginPage.login('locked_out_user', 'secret_sauce');
@@ -24,7 +24,7 @@ test.describe('Login tests', () => {
     // test.info().annotations.push({ type: 'issue', description: 'Login failed as expected!' });    
   });
 
-  test.skip('Faild login - user not authorired and still on login page when passing wrong login or password', async ({ page }) => {
+  test.skip('Failed login - user not authorired and still on login page when passing wrong login or password', async ({ page }) => {
     const loginPage = new LoginPage(page);
 
     await loginPage.login('standard_user', 'wrong_password');
@@ -32,14 +32,14 @@ test.describe('Login tests', () => {
     // test.info().annotations.push({ type: 'issue', description: 'Login failed as expected!' });    
   });
 
-  test.skip('Faild login - user not authorired and still on login page when did not pass password', async ({ page }) => {
+  test.skip('Failed login - user not authorired and still on login page when did not pass password', async ({ page }) => {
     const loginPage = new LoginPage(page);
 
     await loginPage.login('standard_user', '');
     await loginPage.errorMessagePresented('Password is required');
   });
 
-  test.skip('Faild login - user not authorired and still on login page when did not pass username', async ({ page }) => {
+  test.skip('Failed login - user not authorired and still on login page when did not pass username', async ({ page }) => {
     const loginPage = new LoginPage(page);
 
     await loginPage.password_input.fill('wrong_password');

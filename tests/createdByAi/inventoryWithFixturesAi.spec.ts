@@ -8,5 +8,6 @@ test.describe('Inventory Tests', () => {
     await addProductToCart('Sauce Labs Backpack');
     await startCheckout();
     expect(page.url()).toContain('checkout-step-one.html');
+    expect(await page.locator(`xpath=//span[text() = "Checkout: Your Information"]`).isVisible()).toBeTruthy();
   });
 });

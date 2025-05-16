@@ -12,5 +12,6 @@ test.describe('Inventory Tests', () => {
     await inventoryPage.shopping_cart_icon.click();
     await cartPage.checkout_button.click();
     await checkoutStepOnePage.isOpened();
+    expect(checkoutStepOnePage.checkoutStepOneHeader.isVisible()).toBeTruthy();
   });
 });
