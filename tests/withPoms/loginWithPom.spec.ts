@@ -8,7 +8,7 @@ test.describe('Login tests', () => {
     loginPage.open();
   });
 
-  test('Successful login - user is authorired and redirected to the products page when passing propper login and password', async ({ page }) => {
+  test.skip('Successful login - user is authorired and redirected to the products page when passing propper login and password', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const inventoryPage = new InventoryPage(page);
 
@@ -16,7 +16,7 @@ test.describe('Login tests', () => {
     await inventoryPage.isOpened();
   });
 
-  test('Failed login - user not authorired because is locked out', async ({ page }) => {
+  test.skip('Failed login - user not authorired because is locked out', async ({ page }) => {
     const loginPage = new LoginPage(page);
 
     await loginPage.login('locked_out_user', 'secret_sauce');

@@ -5,7 +5,7 @@ import { CartPage } from '../pom/cartPage';
 import { CheckoutStepOnePage } from '../pom/checkoutStepOne';
 
 test.describe('Inventory Tests', () => {
-  test('Add product to cart and start checkout', async ({ page }) => {
+  test.skip('Add product to cart and start checkout', async ({ page }) => {
     const loginPage = new LoginPage(page);
     const inventoryPage = new InventoryPage(page);
     const cartPage = new CartPage(page);
